@@ -1,10 +1,10 @@
 <script>
-import Home from './views/Home.vue';
+import Nav from './components/Nav.vue';
 
 export default{
     name:'App',
     components:{
-    Home
+    Nav
 }
 }
 
@@ -12,7 +12,8 @@ export default{
 </script>
 
 <template>
-    <Home/>
+    <Nav/>
+    <RouterView></RouterView>
 </template>
 
 <style scoped>

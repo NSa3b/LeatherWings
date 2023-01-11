@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import router from './router'
+import router from './router'
 
 
 //Font Awesome
@@ -22,7 +22,7 @@ library.add(faCartPlus,faUser,faCircleChevronLeft,faCircleChevronRight)
 
 const app = createApp(App)
 
-// app.use(router)
+app.use(router)
 
 app.use(bootstrap)
 app.component('font-awesome-icon', FontAwesomeIcon)

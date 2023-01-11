@@ -44,7 +44,7 @@ export default {
                 this.currentSlide=0;
             }
 
-        },3000)
+        },6000)
        
     },
     beforeUnmount(){

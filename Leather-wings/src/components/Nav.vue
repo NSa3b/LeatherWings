@@ -16,16 +16,16 @@ export default{
 
     <nav>
         <div class="navItem pages">
-            <p><a>HOME</a></p>
-            <p><a>SHOP</a></p>
-            <p><a>ABOUT US</a></p>
+            <router-link class="router-link" to="/">HOME</router-link>
+            <router-link class="router-link" to="/shop">SHOP</router-link>
+            <router-link class="router-link" to="/aboutus">ABOUT US</router-link>
         </div>
         <div class="navItem logo">
             <img src="../assets/pics/LOGO LEATHER WINGS.png">
         </div>
         <div class="navItem">
-            <a><font-awesome-icon icon="fa-solid fa-user" size="lg" /></a>
-            <a><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg"/></a>
+            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user" size="lg" /></router-link>
+            <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg"/></router-link>
         </div>
     </nav>
 
@@ -33,8 +33,9 @@ export default{
 
 <style scoped>
 img{
-    width: 8rem;
+    width: 9rem;
     height: auto;
+    margin-right: 17rem;
 }
 .navItem{
     display: flex;
