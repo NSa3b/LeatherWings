@@ -15,12 +15,12 @@ export default{
 <template>
 
     <nav>
-        <div class="navItem pages">
+        <div class="navItem ">
             <router-link class="router-link" to="/">HOME</router-link>
             <router-link class="router-link" to="/shop">SHOP</router-link>
             <router-link class="router-link" to="/aboutus">ABOUT US</router-link>
         </div>
-        <div class="navItem logo">
+        <div class="navItem">
             <img src="../assets/pics/LOGO LEATHER WINGS.png">
         </div>
         <div class="navItem">
@@ -32,6 +32,9 @@ export default{
 </template>
 
 <style scoped>
+.router-link-active{
+    color: #8a8f6a;
+}
 img{
     width: 9rem;
     height: auto;

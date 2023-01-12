@@ -11,7 +11,7 @@ a{
   text-decoration: none;
 }
 @media (hover: hover) {
-  a:hover {
+  a:hover,.router-link:hover{
     color: #8a8f6a !important;
     cursor: pointer;
   }

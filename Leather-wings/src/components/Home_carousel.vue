@@ -5,7 +5,7 @@ import Home_carousel_item from './Home_carousel_item.vue';
 export default {
     name: "Home_carousel",
     components: {
-        Home_carousel_item 
+        Home_carousel_item
     },
     data() {
         return {
@@ -31,23 +31,27 @@ export default {
                     subtitle: "Crafted by Hand"
                 }
             ],
-            currentSlide:0,
-            slideInterval:null
+            currentSlide: 0,
+            slideInterval: null,
+            arrowShown: false
         }
     },
+    methods:{
+
+    },
     mounted() {
-        this.slideInterval=setInterval(()=>{
-            if(this.currentSlide < this.slides.length-1){
+        this.slideInterval = setInterval(() => {
+            if (this.currentSlide < this.slides.length - 1) {
                 this.currentSlide++;
             }
-            else{
-                this.currentSlide=0;
+            else {
+                this.currentSlide = 0;
             }
 
-        },6000)
-       
+        }, 6000)
+
     },
-    beforeUnmount(){
+    beforeUnmount() {
         clearInterval(this.slideInterval);
     }
 }
@@ -56,15 +60,21 @@ export default {
 <template>
 
 
-    <div class="carousell">
+    <div class="carousell" @mouseenter="arrowShown = true" @mouseleave="arrowShown = false">
         <div class="carousell-inner">
-           <Home_carousel_item 
-             v-for="(slide,index) in slides" 
-             :key="`item-${index}`" 
-             :slide="slide" 
-             :currentSlide="currentSlide"
-             :index="index">
-           </Home_carousel_item>
+            <Home_carousel_item v-for="(slide, index) in slides" :key="`item-${index}`" :slide="slide"
+                :currentSlide="currentSlide" :index="index">
+            </Home_carousel_item>
+            <Transition name="show-arrows">
+                <div class="arrows" v-show="arrowShown">
+                    <div>
+                        <a><font-awesome-icon icon="fa-solid fa-circle-chevron-left" size="3x" /></a>
+                    </div>
+                    <div>
+                        <a><font-awesome-icon icon="fa-solid fa-circle-chevron-right" size="3x" /></a>
+                    </div>
+                </div>
+            </Transition>
         </div>
     </div>
 
@@ -73,16 +83,36 @@ export default {
 </template>
 
 <style scoped>
-.carousell{   
+.carousell {
     display: flex;
     justify-content: center;
     color: white;
 }
-.carousell-inner{
+
+.carousell-inner {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
 }
 
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    opacity: 80%;
+}
+
+.show-arrows-enter-active,
+.show-arrows-leave-active {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show-arrows-enter-from,
+.show-arrows-leave-to {
+    opacity: 0;
+}
 </style>
