@@ -1,0 +1,49 @@
+{
+    "Items": [
+        {
+            "id": 1,
+            "title": "The Dagny Weekender | Large Leather Duffle Bag",
+            "description": "The Dagny Weekender will always be dependable for any short trip. Allowing for items to be placed comfortably, compact, and safe. This high-quality design is there to exaggerate functionality and productivity, with a compartment designed specifically for shoes. Other interior pockets are included which will allow for storage of laptops as well as other accessories. It’s completed with a comfortable leather handle will allow for easy transportation, and also comes with the option of a removable shoulder strap. The Dagny Weekender is the ultimate all-rounder bag.",
+            "diminsion": "48 x 23cm x 25cm",
+            "price": "1750",
+            "imgsrc": [
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-887636322.jpg?v=1626717248",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/IMG_1518.jpg?v=1626717248",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/IMG_1539.jpg?v=1626717248",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-887636326.jpg?v=1626717248",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-887636311.jpg?v=1626717248",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-887636327.jpg?v=1626717248"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "The Hagen Backpack | Vintage Leather Backpack",
+            "description": "Genuine cowhide leather with natural creases and lines throughout give the impression of a true antique. The Hagan Backpack has style and quality, as you'll find its leather soft to the touch but durable enough for daily wear and tear. It's highly versatile in usability, lightweight and capacious enough to carry tablets, laptops, books, gadgets and other items with ease. Featuring a large main compartment, two zipped exterior pockets, and single easy-access front pocket.",
+            "diminsion": "37x 31cm x 13cm",
+            "price": "1680",
+            "imgsrc": [
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980660.jpg?v=1602122671",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980646.jpg?v=1602122671",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/TheHagenBackpackVintageLeatherBackpack1.jpg?v=1657144960",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980648.jpg?v=1657144960",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980668.jpg?v=1657144918",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980666.jpg?v=1657144918"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "The Taavi Tote | Handcrafted Leather Tote Bag",
+            "description": "Interior pocket: 1 Large compartment </br> The unstructured everyday carry-all that fits most of life in one convenient place </br> Ergonomically-designed straps distribute weight evenly </br> Includes a free gift of a removable inside clutch ",
+            "diminsion": "34cmx 33cm x 15cm",
+            "price": "1550",
+            "imgsrc": [
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-271637743.jpg?v=1594396448",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-271637754.jpg?v=1594396448",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-271637752.jpg?v=1594396448",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-1035646594.jpg?v=1594396448",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-1035646602.jpg?v=1594396448",
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-271637746.jpg?v=1594396448"
+            ]
+        }
+    ]
+}

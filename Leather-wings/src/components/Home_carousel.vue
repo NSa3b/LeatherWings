@@ -67,10 +67,10 @@ export default {
             </Home_carousel_item>
             <Transition name="show-arrows">
                 <div class="arrows" v-show="arrowShown">
-                    <div>
+                    <div @click="this.currentSlide = this.currentSlide > 0 ? this.currentSlide-1 : this.slides.length - 1">
                         <a><font-awesome-icon icon="fa-solid fa-circle-chevron-left" size="3x" /></a>
                     </div>
-                    <div>
+                    <div @click="this.currentSlide = this.currentSlide < this.slides.length - 1 ? this.currentSlide+1 : 0">
                         <a><font-awesome-icon icon="fa-solid fa-circle-chevron-right" size="3x" /></a>
                     </div>
                 </div>
