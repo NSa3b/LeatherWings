@@ -27,3 +27,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Start JSON Server
+
+```sh
+json-server --watch db.json
+```
