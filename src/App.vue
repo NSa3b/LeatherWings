@@ -13,8 +13,12 @@ export default{
 
 <template>
     <Nav/>
-    <RouterView></RouterView>
+    <RouterView class="page"></RouterView>
 </template>
 
 <style scoped>
+.page{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
 </style>
