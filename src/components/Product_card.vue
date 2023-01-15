@@ -38,7 +38,7 @@ export default {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .mycard-body {
     font-weight: 700;
