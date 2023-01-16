@@ -44,16 +44,9 @@ export default {
     line-height: 5.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
+    color: white;
 }
 
-/* .carousell-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
-} */
 
 .carousell-caption {
     animation: caption 0.7s linear 1;

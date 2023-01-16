@@ -44,6 +44,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
 }
 nav{
     position: fixed;

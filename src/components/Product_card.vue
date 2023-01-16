@@ -32,7 +32,7 @@ export default {
     font-weight: 800;
 }
 .mycard {
-    padding: 0.5rem;
+    padding: 0.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,12 +50,20 @@ export default {
 }
 .mycard-img {
     display: flex;
+    transition: all 0.4s ease-in-out;
 }
+.mycard-img:hover {
+    transform: translateX(-100%);
+}
+
 .mycard-img img {
-    /* object-fit: cover; */
+    object-fit: contain;
     padding:0 0.5rem;
     width: 100%;
     height: auto;
+}
+p{
+    color: black;
 }
 
 </style>
