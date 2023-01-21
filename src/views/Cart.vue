@@ -10,7 +10,6 @@ export default{
 </script>
 
 <template>
-    
     <h1>HELLO FROM CART!</h1>
 </template>
 

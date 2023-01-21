@@ -8,6 +8,9 @@ export default{
         return{
 
         }
+    },
+    props:{
+        cart:Array
     }
 }
 </script>
@@ -26,6 +29,7 @@ export default{
         <div class="navItem">
             <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user" size="lg" /></router-link>
             <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg"/></router-link>
+            <p v-if="cart.length!=0">{{ cart.length }}</p>
         </div>
     </nav>
 
@@ -45,6 +49,22 @@ img{
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    color: white;
+}
+p{
+    position: absolute;
+    left: 92.9%;
+    top: 35%;
+    display: flex;
+    color: white;
+    background-color: #8a8f6a;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
 }
 nav{
     position: fixed;
@@ -55,7 +75,7 @@ nav{
     align-items: center;
     padding: 0 5rem;
     background-color:#161a23cc;
-    color: white;
+    
 }
 a{
     margin: 0 1rem;

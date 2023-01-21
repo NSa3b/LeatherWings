@@ -10,6 +10,9 @@ export default {
             categoryselected:0
         }
     },
+    props:{
+        cart:Array
+    },
     components: {
         productCard
     },
@@ -57,7 +60,7 @@ export default {
             </ul>
         </div>
         <div class="cards">
-            <productCard :all-items="this.allItems"></productCard>
+            <productCard :cart="cart" :all-items="this.allItems"></productCard>
         </div>
 
     </div>

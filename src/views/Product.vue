@@ -1,4 +1,5 @@
 <script>
+import Add_toCart_btn from '../components/Add_toCart_btn.vue';
 export default {
     name: "product",
     data() {
@@ -10,15 +11,28 @@ export default {
 
         }
     },
+    props:{
+        cart:Array
+    },
+    components:{
+        Add_toCart_btn
+
+    },
     methods: {
-        async fetshItem() {
+        async getProduct() {
             const response = await fetch(`http://localhost:3000/items/${this.productId}`);
             const data = await response.json();
             return data;
+        },
+        AddToCart(){
+            for(let i=1 ; i<=this.productQuantity ; i++){
+                this.cart.push(this.product);
+            }
+            console.log(this.cart);
         }
     },
     async created() {
-        this.product = await this.fetshItem();
+        this.product = await this.getProduct();
 
     }
 }
@@ -37,21 +51,26 @@ export default {
             </div>
         </div>
         <div class="productInfo">
-            <h2>{{ product.title }}</h2>
-            <p>{{ product.price }} EGP</p>
-            <div>
-                <p>Quantity</p>
-                <div class="actions">
+            <h3>{{ product.title }}</h3>
+            <div class="price">
+                <p class="price-after" >{{ product.price }} EGP</p>
+                <p class="price-before">{{ product.price*1.2 }} EGP</p>
+            </div>
+            
+            <div class="actions">
+                <p class="b-titles">Quantity</p>
+                <div class="options">
                     <div class="quantity-input">
                         <button @click="(productQuantity==1)?productQuantity=1:productQuantity-=1">-</button>
                         <p>{{ productQuantity }}</p>
                         <button  @click="productQuantity+=1">+</button>
                     </div>
-                    <button class="cartBtn">+ Add to Cart</button>
+                    <Add_toCart_btn @click="AddToCart()" :value="product.id" class="cart-btn-fromproduct"></Add_toCart_btn>
                 </div>
             </div>
             <div class="imgGrp">
-                <img class="badgee"
+                <div>
+                    <img class="badgee"
                     src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FufvDZNcIdjSuksIJsFA1%2FHandmade.png-1665947088444?alt=media&token=4fbb5b07-94d4-4f6f-81f7-65e9bea5eabe" />
                 <img class="badgee"
                     src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FufvDZNcIdjSuksIJsFA1%2FFull%20Grain%20Leather.png-1665947086319?alt=media&token=00123282-667e-4b66-8210-01b45a3f8bc2" />
@@ -61,10 +80,12 @@ export default {
                     src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FufvDZNcIdjSuksIJsFA1%2FFree%20Shipping.png-1665947084660?alt=media&token=0a12ddf2-4575-487e-9431-5fcd578e79e2" />
                 <img class="badgee"
                     src="https://firebasestorage.googleapis.com/v0/b/avada-boost-sales.appspot.com/o/badges%2Fimages%2FufvDZNcIdjSuksIJsFA1%2F30%20days%20Money%20Back.png-1665947082605?alt=media&token=23683438-2c61-4aa6-b6c2-bf7c00a39153" />
-            </div>
+                </div>
+               </div>
+            <hr/>
             <div>
                 <p>{{ product.description }}</p>
-                <h6>Dimensions</h6>
+                <p class="b-titles">Dimensions</p>
                 <p>{{ product.dimension }}</p>
             </div>
         </div>
@@ -82,6 +103,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
     justify-content: center;
+    text-align: start;
 
 }
 
@@ -125,11 +147,19 @@ export default {
 .nonSelectedImg:hover {
     cursor: pointer;
 }
+.imgGrp{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
 
 .productInfo {
     display: flex;
     flex-direction: column;
-    align-items: center
+}
+h3{
+    font-weight: 800;
+   
 }
 
 .badgee {
@@ -138,17 +168,19 @@ export default {
 }
 
 .actions {
+    width: 100%;  
+}
+.options{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
 }
 
 .quantity-input {
     border: 2px solid #cccccc;
-    padding: 1rem;
-    margin: 0 0.5rem;
+    padding: 0.7rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 39%;
 }
 .quantity-input button{
     border: none;
@@ -157,11 +189,27 @@ export default {
 .quantity-input p{
    margin:0 3rem;
 }
-.cartBtn{
-    border: none;
-    background-color: #8a8f6a;
-    color: white;
-    width: 20rem;
-    margin: 0 0.5rem;
+.cart-btn-fromproduct{
+    width: 59%;
+}
+
+.price{
+    display: flex;
+    font-size: xx-large;
+    font-weight: 800;
+    text-align: start;
+    width: 100%;
+}
+.price-after{
+    color: #8a8f6a;
+}
+.price-before{
+    text-decoration: line-through;
+    color: rgb(204,204,204);
+    margin: 0 1.2rem ;
+}
+.b-titles{
+    font-weight: 800;
+    margin-bottom: 0.4rem;
 }
 </style>
