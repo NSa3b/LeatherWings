@@ -1,17 +1,31 @@
 <script>
-export default{
-    name:'Nav',
-    components:{
+export default {
+    name: 'Nav',
+    components: {
 
     },
-    data(){
-        return{
+    data() {
+        return {
+            Noitems: 0
 
         }
     },
-    props:{
-        cart:Array
-    }
+    props: {
+        cart: Array
+    },
+    // watch: {
+    //     cart: {
+    //         handler(newval) {
+    //             for (let item of newval) {
+    //                 this.Noitems += item.quantity;
+    //             }
+    //             console.log("from nav");
+    //         },
+    //         immediate: true,
+    //     }
+
+    // }
+
 }
 </script>
 
@@ -27,31 +41,37 @@ export default{
             <img src="../assets/pics/LOGO LEATHER WINGS.png">
         </div>
         <div class="navItem">
-            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user" size="lg" /></router-link>
-            <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg"/></router-link>
-            <p v-if="cart.length!=0">{{ cart.length }}</p>
+            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user"
+                    size="lg" /></router-link>
+            <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus"
+                    size="lg" /></router-link>
+            <p v-if="cart.length != 0">{{cart.length }}</p>
         </div>
     </nav>
 
 </template>
 
 <style scoped>
-.router-link-active{
+.router-link-active {
     color: #8a8f6a;
 }
-img{
-    width: 9rem;
-    height: auto;
+
+img {
+    
+    height: inherit;
     margin-right: 17rem;
 }
-.navItem{
+
+.navItem {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
     color: white;
+    height: 9rem;
 }
-p{
+
+p {
     position: absolute;
     left: 92.9%;
     top: 35%;
@@ -66,7 +86,8 @@ p{
     align-items: center;
     font-size: smaller;
 }
-nav{
+
+nav {
     position: fixed;
     z-index: 10;
     width: 100vw;
@@ -74,10 +95,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 5rem;
-    background-color:#161a23cc;
-    
+    background-color: #161a23cc;
+
 }
-a{
+
+a {
     margin: 0 1rem;
 }
 </style>

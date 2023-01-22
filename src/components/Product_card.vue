@@ -13,14 +13,6 @@ export default {
     },
     components: {
         Add_toCart_btn
-    },
-    methods:{
-        async AddToCart(id){
-            const response = await fetch(`http://localhost:3000/items/${id}`);
-            const data = await response.json();
-            this.cart.push(data);
-            console.log(this.cart);
-        }
     }
 }
 </script>
@@ -32,7 +24,7 @@ export default {
                 <img v-bind:src="item.imgsrc[0]" />
                 <img v-bind:src="item.imgsrc[1]" />
             </router-link>
-            <Add_toCart_btn @click="AddToCart(item.id)" :value="item.id" class="cart-btn-fromcard"></Add_toCart_btn>
+            <Add_toCart_btn :quantity="1" :cart="cart" :id="item.id" class="cart-btn-fromcard"></Add_toCart_btn>
         </div>
 
         <div class="mycard-body">

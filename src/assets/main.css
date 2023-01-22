@@ -14,6 +14,9 @@ a{
     cursor: pointer;
   }
 }
+.mynav{
+  height: 9rem;
+}
 
 body {
   padding:0;

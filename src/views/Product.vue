@@ -1,5 +1,6 @@
 <script>
 import Add_toCart_btn from '../components/Add_toCart_btn.vue';
+import Quantity_btn from '../components/Quantity_btn.vue';
 export default {
     name: "product",
     data() {
@@ -8,14 +9,14 @@ export default {
             productId: this.$route.params.id,
             selectedImg: 0,
             productQuantity: 1
-
         }
     },
     props:{
-        cart:Array
+        cart:Array,
     },
     components:{
-        Add_toCart_btn
+        Add_toCart_btn,
+        Quantity_btn
 
     },
     methods: {
@@ -23,12 +24,6 @@ export default {
             const response = await fetch(`http://localhost:3000/items/${this.productId}`);
             const data = await response.json();
             return data;
-        },
-        AddToCart(){
-            for(let i=1 ; i<=this.productQuantity ; i++){
-                this.cart.push(this.product);
-            }
-            console.log(this.cart);
         }
     },
     async created() {
@@ -59,13 +54,9 @@ export default {
             
             <div class="actions">
                 <p class="b-titles">Quantity</p>
-                <div class="options">
-                    <div class="quantity-input">
-                        <button @click="(productQuantity==1)?productQuantity=1:productQuantity-=1">-</button>
-                        <p>{{ productQuantity }}</p>
-                        <button  @click="productQuantity+=1">+</button>
-                    </div>
-                    <Add_toCart_btn @click="AddToCart()" :value="product.id" class="cart-btn-fromproduct"></Add_toCart_btn>
+                <div class="options"> 
+                    <Quantity_btn v-on:changeQuant="this.productQuantity=$event" :productQuantity="1" class="quantity-input-fromproduct"></Quantity_btn>
+                    <Add_toCart_btn :quantity="productQuantity" :cart="cart" :id="product.id" class="cart-btn-fromproduct"></Add_toCart_btn>
                 </div>
             </div>
             <div class="imgGrp">
@@ -99,7 +90,7 @@ export default {
 <style scoped>
 .mycontainer {
     display: grid;
-    grid-auto-rows: minmax(10rem, auto);
+    /* grid-auto-rows: minmax(9rem, auto); */
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
     justify-content: center;
@@ -175,19 +166,9 @@ h3{
     justify-content: space-between;
 }
 
-.quantity-input {
-    border: 2px solid #cccccc;
-    padding: 0.7rem;
-    display: flex;
-    justify-content: space-between;
+
+.quantity-input-fromproduct{
     width: 39%;
-}
-.quantity-input button{
-    border: none;
-    background-color: inherit;
-}
-.quantity-input p{
-   margin:0 3rem;
 }
 .cart-btn-fromproduct{
     width: 59%;

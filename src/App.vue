@@ -20,7 +20,6 @@ export default {
         cart: {
             handler(newCart) {
                 localStorage.cart = JSON.stringify(newCart) ;
-                console.log("blablablaa");
             },
             deep: true
         }

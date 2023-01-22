@@ -69,7 +69,7 @@ export default {
 <style scoped>
 .mycontainer {
     display: grid;
-    grid-auto-rows: minmax(10rem, auto);
+    /* grid-auto-rows: minmax(auto, auto); */
     grid-template-columns: 1fr 3fr;
     grid-gap: 2.5rem;
 }

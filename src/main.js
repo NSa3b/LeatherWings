@@ -10,6 +10,7 @@ import {faCartPlus} from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
 import {faCircleChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import {faCircleChevronRight} from '@fortawesome/free-solid-svg-icons'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
@@ -18,7 +19,7 @@ import bootstrap from'bootstrap/dist/js/bootstrap.js'
 import './assets/main.css'
 
 //Font Awesome icons used
-library.add(faCartPlus,faUser,faCircleChevronLeft,faCircleChevronRight)
+library.add(faCartPlus,faUser,faCircleChevronLeft,faCircleChevronRight,faTrashCan)
 
 const app = createApp(App)
 
