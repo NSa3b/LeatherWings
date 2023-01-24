@@ -39,5 +39,12 @@ export default {
     border: none;
     background-color: #8a8f6a;
     color: white;
+    transition: background-color 0.4s ease-in-out , transform 1.5s ease-in-out , top 0.4s ease-in-out, opacity 0.4s ease-in-out;;
+}
+.cartBtn:hover{
+    background-color:#414141;
+}
+.cartBtn:active{
+    transform:scale(0.1)
 }
 </style>

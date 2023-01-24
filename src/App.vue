@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-    <Nav :cart="cart" />
+    <Nav :cart="cart"/>
     <RouterView :cart="cart" class="page"></RouterView>
 </template>
 

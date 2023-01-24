@@ -78,7 +78,7 @@ export default {
 }
 
 .mycard-img:hover .cart-btn-fromcard{
-    top: 65%;
+    top: 62%;
     opacity: 1;
 }
 
@@ -91,11 +91,10 @@ export default {
 
 .cart-btn-fromcard {
     position: absolute;
-    width: 98%;
+    width: 97%;
     height: 2.5rem;
     top: 76%;
     opacity: 0;
-    transition: all 0.4s ease-in-out;
     z-index: 2;
 }
 

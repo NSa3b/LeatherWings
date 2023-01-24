@@ -7,11 +7,11 @@ export default {
         }
     },
     props:{
-        productQuantity: Number
+        productQuantity: Number,
+        productId:Number
     },
     updated(){
-        this.$emit("changeQuant",this.productQuantity);
-        console.log(this.productQuantity);
+        this.$emit("changeQuant",{quant:this.productQuantity,id:this.productId});
     }
 }
 </script>

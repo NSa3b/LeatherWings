@@ -24,6 +24,11 @@ export default {
             const response = await fetch(`http://localhost:3000/items/${this.productId}`);
             const data = await response.json();
             return data;
+        },
+        changeQuant(item) {
+            this.productQuantity = item.quant;
+            console.log("fron change quantity");
+           
         }
     },
     async created() {
@@ -55,7 +60,7 @@ export default {
             <div class="actions">
                 <p class="b-titles">Quantity</p>
                 <div class="options"> 
-                    <Quantity_btn v-on:changeQuant="this.productQuantity=$event" :productQuantity="1" class="quantity-input-fromproduct"></Quantity_btn>
+                    <Quantity_btn v-on:changeQuant="changeQuant($event)" :productId="product.id" :productQuantity="1" class="quantity-input-fromproduct"></Quantity_btn>
                     <Add_toCart_btn :quantity="productQuantity" :cart="cart" :id="product.id" class="cart-btn-fromproduct"></Add_toCart_btn>
                 </div>
             </div>

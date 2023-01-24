@@ -41,11 +41,12 @@ export default {
             <img src="../assets/pics/LOGO LEATHER WINGS.png">
         </div>
         <div class="navItem">
-            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user"
-                    size="lg" /></router-link>
-            <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus"
-                    size="lg" /></router-link>
-            <p v-if="cart.length != 0">{{cart.length }}</p>
+            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user" size="lg" /></router-link>
+            <div class="cartIcon">
+                <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg" /></router-link>
+                <p class="cartNum" v-if="cart.length != 0">{{ cart.length }}</p>
+            </div>
+
         </div>
     </nav>
 
@@ -57,7 +58,7 @@ export default {
 }
 
 img {
-    
+
     height: inherit;
     margin-right: 17rem;
 }
@@ -70,11 +71,14 @@ img {
     color: white;
     height: 9rem;
 }
+.cartIcon{
+    position: relative;
+}
 
-p {
+.cartNum {
     position: absolute;
-    left: 92.9%;
-    top: 35%;
+    left: 65%;
+    top: -30%;
     display: flex;
     color: white;
     background-color: #8a8f6a;
