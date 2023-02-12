@@ -6,25 +6,24 @@ export default {
     },
     data() {
         return {
-            Noitems: 0
 
         }
     },
     props: {
         cart: Array
     },
-    // watch: {
-    //     cart: {
-    //         handler(newval) {
-    //             for (let item of newval) {
-    //                 this.Noitems += item.quantity;
-    //             }
-    //             console.log("from nav");
-    //         },
-    //         immediate: true,
-    //     }
+    computed: {
+        cartItems() {
+            let noItems=0;
+            for (let item of this.cart) {
+                noItems += item.quantity;
+            }
+            return noItems;
+        }
+    }
+   
 
-    // }
+
 
 }
 </script>
@@ -37,14 +36,16 @@ export default {
             <router-link class="router-link" to="/shop">SHOP</router-link>
             <router-link class="router-link" to="/aboutus">ABOUT US</router-link>
         </div>
-        <div class="navItem">
+        <div class="navItem logo">
             <img src="../assets/pics/LOGO LEATHER WINGS.png">
         </div>
         <div class="navItem">
-            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user" size="lg" /></router-link>
+            <router-link class="router-link" to="/userprofile"> <font-awesome-icon icon="fa-solid fa-user"
+                    size="lg" /></router-link>
             <div class="cartIcon">
-                <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus" size="lg" /></router-link>
-                <p class="cartNum" v-if="cart.length != 0">{{ cart.length }}</p>
+                <router-link class="router-link" to="/cart"><font-awesome-icon icon="fa-solid fa-cart-plus"
+                        size="lg" /></router-link>
+                <p class="cartNum" v-if="cart.length != 0">{{ cartItems }}</p>
             </div>
 
         </div>
@@ -53,14 +54,24 @@ export default {
 </template>
 
 <style scoped>
+nav {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: #161a23a3;
+    width: 100%;
+
+}
+
 .router-link-active {
     color: #8a8f6a;
 }
 
 img {
-
     height: inherit;
-    margin-right: 17rem;
 }
 
 .navItem {
@@ -71,7 +82,13 @@ img {
     color: white;
     height: 9rem;
 }
-.cartIcon{
+
+.logo {
+    position: absolute;
+    left: 44.25%;
+}
+
+.cartIcon {
     position: relative;
 }
 
@@ -91,17 +108,7 @@ img {
     font-size: smaller;
 }
 
-nav {
-    position: fixed;
-    z-index: 10;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5rem;
-    background-color: #161a23cc;
 
-}
 
 a {
     margin: 0 1rem;

@@ -27,8 +27,6 @@ export default {
         },
         changeQuant(item) {
             this.productQuantity = item.quant;
-            console.log("fron change quantity");
-           
         }
     },
     async created() {

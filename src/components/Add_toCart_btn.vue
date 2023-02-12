@@ -23,8 +23,6 @@ export default {
                 data.quantity = this.quantity;
                 this.cart.push(data);
             }
-
-            console.log(this.cart);
         }
     }
 }

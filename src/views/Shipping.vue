@@ -1,6 +1,6 @@
 <script>
 export default{
-    name:"checkout",
+    name:"shipping",
     data(){
         return{
 

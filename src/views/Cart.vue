@@ -84,7 +84,7 @@ export default {
                             <p class="text-muted fst-italic">Shipping & taxes calculated at checkout</p>
                             <div class="subb">
                                 <button v-if="cartUpdated" @click="getSubtotal()" class="Update-btn">UPDATECART</button>
-                                <router-link class="router-link" to="/checkout"><button class="checkout-btn">CHECKOUT</button></router-link>
+                                <router-link class="router-link" to="/orderinfo"><button class="checkout-btn">CHECKOUT</button></router-link>
                             </div>
 
                         </div>
