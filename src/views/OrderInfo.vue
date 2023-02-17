@@ -1,17 +1,23 @@
 <script>
+import { toTypeString } from '@vue/shared';
+import ContactInfoForm from '../components/ContactInfo_Form.vue';
+import Shipping from './Shipping.vue';
 export default {
     name: "orderinfo",
+    components: {
+        ContactInfoForm
+    },
     data() {
         return {
-            subtotal:0
+            subtotal: 0,
+            shipping:50
 
         }
     },
     props: {
         cart: Array
     },
-    methods:{
-
+    methods: {
         getSubtotal() {
             this.subtotal = 0;
             for (let i = 0; i < this.cart.length; i++) {
@@ -20,7 +26,13 @@ export default {
             }
         }
     },
-    mounted() {
+    computed:{
+        total(){
+            return this.subtotal+ parseInt(this.shipping);
+        }
+
+    },
+    created() {
         this.getSubtotal();
     },
 }
@@ -30,15 +42,12 @@ export default {
     <div class="mycontainer">
         <div class="mynav"></div>
         <div class="d-flex">
-            <div id="Info">
-                <h5>Contact Information</h5>
-                <hr>
 
+            <div id="Info">
+                <ContactInfoForm></ContactInfoForm>
             </div>
 
             <div id="cartItems">
-                <h5>Cart</h5>
-                <hr>
                 <div v-for="item in cart" class="Item">
                     <div class="d-flex align-items-center">
                         <div class="itemImg">
@@ -58,14 +67,25 @@ export default {
                     <p>Subtotal</p>
                     <p>{{ subtotal.toLocaleString() }} EGP</p>
                 </div>
-                <div class="Item">
+                <div class="shipping">
                     <p>Shipping</p>
-                    <p class="text-muted">Calculated at next step</p>
+                    <div>
+                        <input type="radio" id="cairo" value=50 v-model="shipping" name="ship" checked>
+                        <label for="cairo">Cairo: 50 EGP</label>   
+                    </div>
+                    <div>
+                        <input type="radio" id="alex" value=40 v-model="shipping" name="ship">
+                        <label for="alex">Alexandria: 40 EGP</label>   
+                    </div>
+                    <div>
+                        <input type="radio" id="delta&canal" value=65 v-model="shipping" name="ship">
+                        <label for="delta&canal">Delta & Canal: 65 EGP</label>   
+                    </div>
                 </div>
                 <hr>
                 <div class="Item">
                     <p>Total</p>
-                    <p class="fw-bold fs-5">{{ subtotal.toLocaleString() }} EGP</p>
+                    <p class="fw-bold fs-5">{{ total }} EGP</p>
                 </div>
             </div>
         </div>
@@ -95,6 +115,8 @@ export default {
 }
 
 #cartItems {
+    border: 0.1rem solid #8a8f6a;
+    padding: 1rem;
     width: 40vw;
 }
 
@@ -103,7 +125,9 @@ export default {
     justify-content: space-between;
     align-items: center;
     font-size: small;
-
+}
+.shipping{
+    font-size: small;
 }
 
 .itemImg {
@@ -113,7 +137,8 @@ export default {
     margin-right: 0.5rem;
     margin-bottom: 0.6rem;
 }
-.itemCont {   
+
+.itemCont {
     border: 0.06rem solid rgba(91, 91, 91, 0.557);
     border-radius: 10%;
     overflow: hidden;
@@ -146,5 +171,10 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: smaller;
+}
+input[type="radio"]:checked+label{
+    font-weight: bold;
+    margin-left: 0.5rem;
+
 }
 </style>

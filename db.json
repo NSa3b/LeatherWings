@@ -14,9 +14,7 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-887636311.jpg?v=1626717248",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/IMG_1518.jpg?v=1626717248",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/IMG_1539.jpg?v=1626717248"
-
             ]
-            
         },
         {
             "id": 2,
@@ -33,7 +31,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980668.jpg?v=1657144918",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-294980666.jpg?v=1657144918"
             ]
-            
         },
         {
             "id": 3,
@@ -66,7 +63,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-1110263388.jpg?v=1594396451",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-1110263389.jpg?v=1594396451"
             ]
-            
         },
         {
             "id": 5,
@@ -83,7 +79,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-815928985.jpg?v=1594396417",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-815928981.jpg?v=1594396417"
             ]
-        
         },
         {
             "id": 6,
@@ -100,7 +95,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-770759868.jpg?v=1594396398",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-770759872.jpg?v=1594396398"
             ]
-            
         },
         {
             "id": 7,
@@ -117,7 +111,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/product-image-1452010852.jpg?v=1610049510",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/42fa547b-a32c-4d85-babc-c2ac4aa70ae1.jpg?v=1610049510"
             ]
-            
         },
         {
             "id": 8,
@@ -127,14 +120,13 @@
             "price": "1200",
             "catId": "5",
             "imgsrc": [
-                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/UntitledDesign_2.png?v=1619127242", 
+                "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/UntitledDesign_2.png?v=1619127242",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/HTB1y8.ak5MnBKNjSZFCq6x0KFXaR.jpg?v=1619130587",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/HTB1xWF8XDQspeRjt_a0q6zPbFXae.jpg?v=1619130587",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/HTB1Z.Zmk5QnBKNjSZFmq6AApVXah.jpg?v=1619130587",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/HTB14kb9EDJYBeNjy1zeq6yhzVXa6.jpg?v=1619130587",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/HTB17eZWv3KTBuNkSne1q6yJoXXaa.jpg?v=1619130587"
             ]
-            
         },
         {
             "id": 9,
@@ -151,7 +143,6 @@
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/Ha4dcaa7e1ec140139160acd48d06453fq.png?v=1632242690",
                 "https://cdn.shopify.com/s/files/1/0184/4605/7572/products/H956f5d91127a4fdaa0016e0e3f142878q.jpg?v=1632242551"
             ]
-        
         }
     ],
     "category": [
@@ -166,7 +157,7 @@
         {
             "id": 3,
             "title": "Messenger Bags"
-        },  
+        },
         {
             "id": 4,
             "title": "Tote Bags"
@@ -180,11 +171,141 @@
             "title": "Accessories"
         }
     ],
-    "comments": [
+    "governates": [
         {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "id": "1",
+            "governorate_name_ar": "القاهرة",
+            "governorate_name_en": "Cairo"
+        },
+        {
+            "id": "2",
+            "governorate_name_ar": "الجيزة",
+            "governorate_name_en": "Giza"
+        },
+        {
+            "id": "3",
+            "governorate_name_ar": "الأسكندرية",
+            "governorate_name_en": "Alexandria"
+        },
+        {
+            "id": "4",
+            "governorate_name_ar": "الدقهلية",
+            "governorate_name_en": "Dakahlia"
+        },
+        {
+            "id": "5",
+            "governorate_name_ar": "البحر الأحمر",
+            "governorate_name_en": "Red Sea"
+        },
+        {
+            "id": "6",
+            "governorate_name_ar": "البحيرة",
+            "governorate_name_en": "Beheira"
+        },
+        {
+            "id": "7",
+            "governorate_name_ar": "الفيوم",
+            "governorate_name_en": "Fayoum"
+        },
+        {
+            "id": "8",
+            "governorate_name_ar": "الغربية",
+            "governorate_name_en": "Gharbiya"
+        },
+        {
+            "id": "9",
+            "governorate_name_ar": "الإسماعلية",
+            "governorate_name_en": "Ismailia"
+        },
+        {
+            "id": "10",
+            "governorate_name_ar": "المنوفية",
+            "governorate_name_en": "Menofia"
+        },
+        {
+            "id": "11",
+            "governorate_name_ar": "المنيا",
+            "governorate_name_en": "Minya"
+        },
+        {
+            "id": "12",
+            "governorate_name_ar": "القليوبية",
+            "governorate_name_en": "Qaliubiya"
+        },
+        {
+            "id": "13",
+            "governorate_name_ar": "الوادي الجديد",
+            "governorate_name_en": "New Valley"
+        },
+        {
+            "id": "14",
+            "governorate_name_ar": "السويس",
+            "governorate_name_en": "Suez"
+        },
+        {
+            "id": "15",
+            "governorate_name_ar": "اسوان",
+            "governorate_name_en": "Aswan"
+        },
+        {
+            "id": "16",
+            "governorate_name_ar": "اسيوط",
+            "governorate_name_en": "Assiut"
+        },
+        {
+            "id": "17",
+            "governorate_name_ar": "بني سويف",
+            "governorate_name_en": "Beni Suef"
+        },
+        {
+            "id": "18",
+            "governorate_name_ar": "بورسعيد",
+            "governorate_name_en": "Port Said"
+        },
+        {
+            "id": "19",
+            "governorate_name_ar": "دمياط",
+            "governorate_name_en": "Damietta"
+        },
+        {
+            "id": "20",
+            "governorate_name_ar": "الشرقية",
+            "governorate_name_en": "Sharkia"
+        },
+        {
+            "id": "21",
+            "governorate_name_ar": "جنوب سيناء",
+            "governorate_name_en": "South Sinai"
+        },
+        {
+            "id": "22",
+            "governorate_name_ar": "كفر الشيخ",
+            "governorate_name_en": "Kafr Al sheikh"
+        },
+        {
+            "id": "23",
+            "governorate_name_ar": "مطروح",
+            "governorate_name_en": "Matrouh"
+        },
+        {
+            "id": "24",
+            "governorate_name_ar": "الأقصر",
+            "governorate_name_en": "Luxor"
+        },
+        {
+            "id": "25",
+            "governorate_name_ar": "قنا",
+            "governorate_name_en": "Qena"
+        },
+        {
+            "id": "26",
+            "governorate_name_ar": "شمال سيناء",
+            "governorate_name_en": "North Sinai"
+        },
+        {
+            "id": "27",
+            "governorate_name_ar": "سوهاج",
+            "governorate_name_en": "Sohag"
         }
     ],
     "profile": {
