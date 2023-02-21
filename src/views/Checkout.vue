@@ -1,10 +1,13 @@
 <script>
 export default{
-    name:"shipping",
+    name:"checkout",
     data(){
         return{
 
         }
+    },
+    props:{
+        order:Array
     }
 }
 </script>
@@ -12,6 +15,7 @@ export default{
 <template>
 
     <h1>HELLO FROM CHECKOUT!</h1>
+    <p></p>
 
 </template>
 

@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import Cart from '../views/Cart.vue'
 import Shop from '../views/Shop.vue'
 import AboutUs from '../views/AboutUs.vue'
-import Shipping from '../views/Shipping.vue'
+import Checkout from '../views/Checkout.vue'
 import OrderInfo from '../views/OrderInfo.vue'
 import Product from '../views/Product.vue'
 import UserProfile from '../views/UserProfile.vue'
@@ -33,9 +33,9 @@ const router = createRouter({
 
     },
     {
-      path:'/shipping',
-      name:'shipping',
-      component: Shipping
+      path:'/checkout',
+      name:'checkout',
+      component: Checkout
 
     },
     {

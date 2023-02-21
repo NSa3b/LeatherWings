@@ -1,7 +1,7 @@
 <script>
 import { toTypeString } from '@vue/shared';
 import ContactInfoForm from '../components/ContactInfo_Form.vue';
-import Shipping from './Shipping.vue';
+import Shipping from './Checkout.vue';
 export default {
     name: "orderinfo",
     components: {
