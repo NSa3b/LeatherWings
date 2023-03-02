@@ -20,7 +20,7 @@ export default {
             let orderId = Math.floor(Math.random() * 1000);
             let contactInfo = JSON.parse(localStorage.ContactInfo);
             let orderitems = [];
-            let subtotal=0;
+            let subtotal = 0;
             for (let i = 0; i < this.cart.length; i++) {
                 orderitems.push({
                     id: this.cart[i].id,
@@ -44,10 +44,10 @@ export default {
                     shipping = 65;
             }
             this.order = {
-                "orderId":orderId,
+                "orderId": orderId,
                 "contactInfo": contactInfo,
                 "orderitems": orderitems,
-                "subtotal":subtotal,
+                "subtotal": subtotal,
                 "shipping": shipping
             };
 
@@ -62,30 +62,9 @@ export default {
                 body: JSON.stringify(this.order),
             })
 
-            let orderedItems=JSON.parse(JSON.stringify(this.cart));
-            console.log(orderedItems.length);
-            for(let i=0; orderedItems.length>0;i++){
-
-                orderedItems[i].selled=Number(orderedItems[i].selled)+1;
-                delete orderedItems[i].quantity;
-                console.log(orderedItems[i]);
-
-                const editresponse = await fetch(`http://localhost:3000/Items/${orderedItems[i].id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(orderedItems[i]),
-                })
-            }
-       
             localStorage.clear();
-            this.$router.replace({name:"checkout", params: {id:this.order.orderId} })
+            this.$router.replace({ name: "checkout", params: { id: this.order.orderId } })
         }
-
-    },
-    created() {
-        this.showOrder();
 
     },
     computed: {
@@ -93,6 +72,37 @@ export default {
             return this.order.subtotal + this.order.shipping;
         }
     },
+    created() {
+        this.showOrder();
+
+    },
+    async beforeUnmount() {
+
+        let orderedItems = JSON.parse(JSON.stringify(this.cart));
+        console.log(orderedItems.length);
+
+        for (let i = 0; orderedItems.length > 0; i++) {
+
+            console.log(orderedItems[i].selled);
+            console.log(typeof (orderedItems[i].selled));
+
+            orderedItems[i].selled += 1;
+
+            console.log(orderedItems[i].selled);
+            console.log(typeof (orderedItems[i].selled));
+
+            delete orderedItems[i].quantity;
+            console.log(orderedItems[i]);
+
+            const editresponse = await fetch(`http://localhost:3000/Items/${orderedItems[i].id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(orderedItems[i]),
+            })
+        }
+    }
 }
 </script>
 
@@ -129,7 +139,7 @@ export default {
                             <input id="shipmethod" type="radio" checked>
                             <label for="shipmethod">Cash upon deleviry</label>
                         </div>
-                        <p class="total">{{ total }} EGP</p>
+                        <p class="total">{{ total.toLocaleString() }} EGP</p>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -217,4 +227,5 @@ input[type="radio"]:checked+label {
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     transition: background-color 0.4s ease-in-out, transform 1.5s ease-in-out;
-}</style>
+}
+</style>

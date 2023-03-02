@@ -60,17 +60,6 @@ export default {
                 console.log(this.errors);
             }
 
-            if (Object.keys(this.errors).length == 0) {
-                console.log("Sounds Greate!");
-                this.$router.replace({ path: 'checkout' })
-            }
-            else {
-                console.log(this.errors);
-            }
-
-        },
-        inputChange(input) {
-            this.errors[input] = "";
         },
         inputChange(input) {
             this.errors[input] = "";

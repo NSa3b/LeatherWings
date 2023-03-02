@@ -59,11 +59,15 @@ export default {
                 </div>
                 <div class="info">
                     <p>Total</p>
-                    <p class="fw-bold fs-6">{{ order.shipping + order.subtotal }} EGP</p>
+                    <p class="fw-bold fs-6">{{  (order.shipping + order.subtotal).toLocaleString() }} EGP</p>
                 </div>
             </div>
             <h6>Thank you ! hope to see you again</h6>
            
+        </div>
+        <div class="navigation">
+            <RouterLink to="/" replace><button class="checkout-btn">Return Home</button></RouterLink>
+            <RouterLink to="/shop" replace><button class="checkout-btn">checkout more products</button></RouterLink>
         </div>
  
 
@@ -106,5 +110,14 @@ hr {
 }
 h6{
     align-self: center;
+}
+.checkout-btn {
+    font-weight: 600;
+    border: none;
+    background-color: #8a8f6a;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.4s ease-in-out, transform 1.5s ease-in-out;
 }
 </style>

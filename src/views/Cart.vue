@@ -201,4 +201,7 @@ img {
     font-size: x-large;
     color: #8a8f6a;
 }
+.Noitems{
+    height: 60vh;
+}
 </style>

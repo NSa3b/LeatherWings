@@ -61,7 +61,7 @@ export default {
     <hr>
     <div class="Item">
         <p>Total</p>
-        <p class="fw-bold fs-5">{{ total }} EGP</p>
+        <p class="fw-bold fs-5">{{ total.toLocaleString() }} EGP</p>
     </div>
 
 </template>
