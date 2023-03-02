@@ -66,15 +66,17 @@ export default {
 
 .mycard-img {
     margin-bottom: 2rem;
-  overflow: hidden;
+    overflow: hidden;
 }
 .imgs{
     display: flex;
     transition: all 0.4s ease-in-out;
     z-index: 1;
+    width: 200%;
+
 }
 .mycard-img:hover .imgs{
-    transform: translateX(-100%);
+    transform: translateX(-50%);
 }
 
 .mycard-img:hover .cart-btn-fromcard{
@@ -83,9 +85,9 @@ export default {
 }
 
 .mycard-img img {
-    object-fit: contain;
+    object-fit: cover;
     padding: 0 0.5rem;
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 

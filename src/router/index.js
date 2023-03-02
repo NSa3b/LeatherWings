@@ -3,10 +3,12 @@ import Home from '../views/Home.vue'
 import Cart from '../views/Cart.vue'
 import Shop from '../views/Shop.vue'
 import AboutUs from '../views/AboutUs.vue'
-import Shipping from '../views/Shipping.vue'
+import Checkout from '../views/Checkout.vue'
 import OrderInfo from '../views/OrderInfo.vue'
 import Product from '../views/Product.vue'
 import UserProfile from '../views/UserProfile.vue'
+import ContactInfoForm from '../components/ContactInfo_Form.vue';
+import ShippingInfo from '../views/Shipping_Info.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,32 +29,37 @@ const router = createRouter({
       component: Shop
     },
     {
-      path:'/aboutus',
-      name:'aboutus',
+      path: '/aboutus',
+      name: 'aboutus',
       component: AboutUs
 
     },
     {
-      path:'/shipping',
-      name:'shipping',
-      component: Shipping
-
+      path: '/checkout/:id',
+      name: 'checkout',
+      component: Checkout
     },
     {
-      path:'/orderinfo',
-      name:'orderinfo',
+      path: '/orderinfo',
+      name: '/orderinfo',
       component: OrderInfo
-
     },
     {
-      path:'/product/:id',
-      name:'product',
+      path: '/shipping',
+      name: 'shipping',
+      component: ShippingInfo,
+
+    },
+    
+    {
+      path: '/product/:id',
+      name: 'product',
       component: Product
 
     },
     {
-      path:'/userprofile',
-      name:'userprofile',
+      path: '/userprofile',
+      name: 'userprofile',
       component: UserProfile
 
     }

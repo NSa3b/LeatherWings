@@ -36,7 +36,7 @@ export default {
         }
 
     },
-    async created() {
+    async created() {a
         this.getAllitems();
         this.getCategories();
     }

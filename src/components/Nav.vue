@@ -84,6 +84,7 @@ img {
 }
 
 .logo {
+    height: 65%;
     position: absolute;
     left: 44.25%;
 }
