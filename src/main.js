@@ -27,9 +27,7 @@ import './assets/main.css'
 library.add(faCartPlus,faUser,faCircleChevronLeft,faCircleChevronRight,faChevronLeft,faTrashCan,faHouse,faEnvelope,faSquareFacebook,faSquareInstagram)
 
 const app = createApp(App)
-
 app.use(router)
-
 app.use(bootstrap)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
