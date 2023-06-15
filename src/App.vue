@@ -1,12 +1,15 @@
 <script>
 import Nav from './components/Nav.vue';
 import Footer from './components/Footer.vue';
+import Application from './views/Application.vue'
+
 
 export default {
     name: 'App',
     components: {
         Nav,
-        Footer
+        Footer,
+        Application
     },
     data() {
         return {
@@ -36,6 +39,8 @@ export default {
     <Nav :cart="cart"></Nav>
     <RouterView :cart="cart" class="page"></RouterView>
     <Footer></Footer>
+    <!-- <Application></Application> -->
+    
 </template>
 
 <style scoped>

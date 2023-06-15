@@ -1,6 +1,7 @@
 <script>
 import Home_carousel from '../components/Home_carousel.vue';
 import Product_car from '../components/Product_card.vue';
+
 export default {
     name: 'Home',
     components: {
@@ -57,6 +58,7 @@ export default {
             <Product_car :cart="cart" :all-items="this.bestSeller"></Product_car>
         </div>
     </div>
+    
 </template>
 
 <style scoped>
